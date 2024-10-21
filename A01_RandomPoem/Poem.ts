@@ -26,7 +26,8 @@ namespace RandomPoem {
         return verse;
     }
 
-    for (let i = 0; i < 5; i++) {  // Fünf Zeilen generieren
+    //for (Generate 5 Lines)
+    for (let i = 0; i < 5; i++) {
         const line: string = getVerse(subject, predicate, objects);
         console.log(line);
     }
