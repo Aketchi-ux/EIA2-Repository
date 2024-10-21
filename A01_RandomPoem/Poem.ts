@@ -30,4 +30,3 @@ namespace RandomPoem {
         const line: string = getVerse(subject, predicate, objects);
         console.log(line);
     }
-}
