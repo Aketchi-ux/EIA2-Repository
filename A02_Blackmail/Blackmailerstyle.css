@@ -1,4 +1,9 @@
-.mail
+#mail
 {
-    
+    border: 15px solid green;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
 }
