@@ -1,12 +1,25 @@
-#mail
-{
-    border: 15px solid rgb(0, 0, 0);
-    padding: 50px;
-    margin-left: auto;
-    margin-right: auto;
+html, body {
+    height: 100%;
+    margin: 0 8px;
 }
 
-span
-{
+body {
+    text-align: center;
+    display: grid;
+    grid-template-rows: min-content min-content auto;
+}
 
+#mail
+{
+    border: thin solid black;
+    background-color: rgb(233, 233, 118);
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+span {
+    font-size: 6em;
+    position: absolute;
+    border: thin dotted black;
 }
