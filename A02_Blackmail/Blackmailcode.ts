@@ -1,4 +1,3 @@
-namespace Blackmailcompanion
-{
-    function set
+namespace L02_Blackmail{
+    
 }
