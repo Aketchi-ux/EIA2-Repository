@@ -9,13 +9,19 @@ body {
     grid-template-rows: min-content min-content auto;
 }
 
-#mail
+#div1
 {
-    border: thin solid black;
-    background-color: rgb(233, 233, 118);
-    position: relative;
-    top: 0px;
-    left: 0px;
+    float: left; 
+    width: 50%; 
+    margin-right: 2%; 
+    padding: 20px; 
+    background: #d10b0b; 
+    box-sizing: border-box;
+}
+
+#div2
+{
+    margin: auto;
 }
 
 span {
