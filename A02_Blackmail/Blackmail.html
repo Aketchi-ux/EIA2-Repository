@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<link rel="Stylesheet" href="Blackmailerstyle.css">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blackmailer Companion</title>
+    <title>Event Inspector</title>
+    <link rel="stylesheet" href="Blackmailerstyle.css">
     <script src="Blackmailcode.js"></script>
 </head>
 <body>
-    <h1>Blackmailer Companion</h1>
-    <p>Select Character with Keyboard, place with mousse click, delet with click</p>
-    <div id="div1"></div>
-    <div id="div2"></div>
-    <span></span>
+    <div class="container">
+        <div id="div1">
+            <p>Div 1 - Kein Button</p>
+        </div>
+        <div id="div2">
+            <p>Div 2 - Button</p>
+            <button id="Button">Click Me</button>
+            <span id="infoBox"></span>
+        </div>
+    </div>
+
+    <div id="eventInspector">
+        <h3>Event Inspector</h3>
+        <ul id="eventList">
+        </ul>
+    </div>
+
+    
 </body>
 </html>

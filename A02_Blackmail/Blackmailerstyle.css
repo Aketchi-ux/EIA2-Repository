@@ -1,31 +1,66 @@
-html, body {
-    height: 100%;
-    margin: 0 8px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 body {
-    text-align: center;
-    display: grid;
-    grid-template-rows: min-content min-content auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255); /* Weißer Hintergrund */
 }
 
-#div1
-{
-    float: left; 
-    width: 50%; 
-    margin-right: 2%; 
-    padding: 20px; 
-    background: #d10b0b; 
-    box-sizing: border-box;
+.container {
+    display: flex;
+    gap: 100px;
+    margin: 20px;
 }
 
-#div2
-{
-    margin: auto;
+div {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: rgb(128, 0, 0);
+    width: 1500px;
+    margin-bottom: 20%;
 }
 
-span {
-    font-size: 6em;
-    position: absolute;
-    border: thin dotted black;
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: white; /* Button in Weiß */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: rgb(25, 8, 133);
+}
+
+#eventInspector {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 300px;
+}
+
+#eventInspector h3 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+#eventList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#eventList li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#infoBox{
+    position: fixed;
+    
 }
