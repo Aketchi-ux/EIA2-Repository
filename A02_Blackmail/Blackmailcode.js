@@ -1,5 +1,5 @@
 "use strict";
-// Button-Element referenzieren
+
 let eventList;
 window.addEventListener("load", handleLoad);
 function handleLoad() {
@@ -11,7 +11,7 @@ function handleLoad() {
         // Ein Custom-Event erstellen
         const customEvent = new CustomEvent('customEvent', {
             detail: { message: 'Button wurde geklickt!' },
-            bubbles: true, // Das Event soll im DOM aufsteigen
+            bubbles: true,
             cancelable: true
         });
         // Das Custom-Event auf den Button auslösen
@@ -49,4 +49,3 @@ function logEventInfo(_event) {
     console.log("Event CurrentType:", _event.currentTarget);
     console.log("Full Event Object:", _event);
 }
-//# sourceMappingURL=Blackmailcode.js.map
