@@ -4,7 +4,21 @@ body{
 }
 
 #Liste{
-    background-color: red;
-    padding: 10px;
-    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 120px;
+    width: 300px;
+    border: 1px solid black;
+}
+
+#addtask{
+    float: left;
+    width: 150px;
+    border: 1px solid black;
+}
+    
+#deletetask{
+    float: right;
+    width: 150px;
+    border: 1px solid black;
 }
