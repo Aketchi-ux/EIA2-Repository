@@ -3,12 +3,18 @@ body{
     text-align: center;
 }
 
+.task{
+    list-style-type: circle;
+    text-align: left;
+}
+
 #Liste{
-    margin-left: auto;
-    margin-right: auto;
-    height: 120px;
-    width: 300px;
-    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: white;
+    border:  2px solid black;
+    border-radius: 1em 1em 1em 1em;
+    margin:  20px auto;
+    padding: 2em;
 }
 
 #addtask{
