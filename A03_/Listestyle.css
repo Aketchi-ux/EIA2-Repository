@@ -17,6 +17,14 @@ body{
     padding: 2em;
 }
 
+.date{
+    text-align: left;
+}
+
+.Deadline{
+    float: right;
+}
+
 #addtask{
     float: left;
     width: 150px;
