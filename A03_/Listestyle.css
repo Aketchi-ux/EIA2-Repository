@@ -17,6 +17,16 @@ body{
     padding: 2em;
 }
 
+#Category1{
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: -10px; /* Moves the legend up */
+}
+
 .date{
     text-align: left;
 }
@@ -27,12 +37,18 @@ body{
 
 #addtask{
     float: left;
-    width: 150px;
+    width: 50px;
     border: 1px solid black;
 }
     
+#changetask{
+    float: center;
+    width: 50px;
+    border: 1px solid black;
+}
+
 #deletetask{
     float: right;
-    width: 150px;
+    width: 50px;
     border: 1px solid black;
 }
