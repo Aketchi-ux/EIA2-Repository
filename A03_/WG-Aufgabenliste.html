@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Aufgabenliste</title>
         <link rel="stylesheet" href="Listestyle.css">
+        <script src="DataStructure.js"></script>
     </head>
     <body>
         <h1>WG-Aufgaben</h1>
@@ -32,7 +33,8 @@
                 <input type="radio" name="Progress" id="workingon" value="Workingon"/>
                 <label for="workingon">Working on</label>
                 <input type="radio" name="Progress" id="finished" value="Finished"/>
-                <label for="finished">Finished</label>
+                <label for="finished">Finished</label>#
+                <input class="Deadline"></input>
             <li class="task">Fenster putzen</li>
                 <input type="radio" name="Progress" id="pending" value="Pending"/>
                 <label for="pending">Pending</label>
@@ -40,6 +42,7 @@
                 <label for="workingon">Working on</label>
                 <input type="radio" name="Progress" id="finished" value="Finished"/>
                 <label for="finished">Finished</label>
+                <input class="Deadline"></input>
         </div>
         <button id="addtask">Add</button>
         <button id="deletetask">Delete</button>
