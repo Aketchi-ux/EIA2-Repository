@@ -3,9 +3,9 @@ body{
     text-align: center;
 }
 
-.task{
-    list-style-type: circle;
-    text-align: left;
+.info{
+    margin-right: 100%;
+    width: 100%;
 }
 
 #Liste{

@@ -11,38 +11,18 @@
         <h1>WG-Aufgaben</h1>
             <div id="Liste">
                 <legend id="Aufgabenliste">Aufgabenliste</legend>
-                <li class="task">Küche putzen</li>
-                    <input type="radio" name="Progress" id="pending" value="Pending"/>
+                <fieldset>
+                    <input type="text" name="task" class="info" placeholder="Type in your Task..."> <br>
+                    <input type="text" name="task" class="info" placeholder="Type in Person..."> <br>
+                    <textarea name="comment" class="info" placeholder="Comment..."></textarea>
+                    <input type="radio" name="Progress" id="status" value="Pending"/>
                     <label for="pending">Pending</label>
-                    <input type="radio" name="Progress" id="workingon" value="Workingon"/>
-                    <label for="workingon">Working on</label>
-                    <input type="radio" name="Progress" id="finished" value="Finished"/>
-                    <label for="finished">Finished</label>
+                    <input type="radio" name="Progress" id="status" value="Workingon"/>
+                    <label for="workingon">In Progress</label>
+                    <input type="radio" name="Progress" id="status" value="completed"/>
+                    <label for="finished">Completed</label>
                     <input class="Deadline" type="datetime-local"></input>
-                <li class="task">Staubsaugen</li>
-                    <input type="radio" name="Progress" id="pending" value="Pending"/>
-                    <label for="pending">Pending</label>
-                    <input type="radio" name="Progress" id="workingon" value="Workingon"/>
-                    <label for="workingon">Working on</label>
-                    <input type="radio" name="Progress" id="finished" value="Finished"/>
-                    <label for="finished">Finished</label>
-                    <input class="Deadline" type="datetime-local"></input>
-                <li class="task">Spülmaschine ausräumen</li>
-                    <input type="radio" name="Progress" id="pending" value="Pending"/>
-                    <label for="pending">Pending</label>
-                    <input type="radio" name="Progress" id="workingon" value="Workingon"/>
-                    <label for="workingon">Working on</label>
-                    <input type="radio" name="Progress" id="finished" value="Finished"/>
-                    <label for="finished">Finished</label>
-                    <input class="Deadline" type="datetime-local"></input>
-                <li class="task">Fenster putzen</li>
-                    <input type="radio" name="Progress" id="pending" value="Pending"/>
-                    <label for="pending">Pending</label>
-                    <input type="radio" name="Progress" id="workingon" value="Workingon"/>
-                    <label for="workingon">Working on</label>
-                    <input type="radio" name="Progress" id="finished" value="Finished"/>
-                    <label for="finished">Finished</label>
-                    <input class="Deadline" type="datetime-local"></input>
+                </fieldset>
             </div>
         <button id="addtask">Add</button>
         <button id="changetask">Change</button>
