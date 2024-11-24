@@ -16,7 +16,7 @@ namespace A03_Formular {
         skipButton.addEventListener("click", nextTask);
         let settingButton: HTMLElement = <HTMLElement>document.querySelector(".settingButton");
         settingButton.addEventListener("click", settingTask);
-        getJson();
+        await getJson();
         showTask();
     }
 

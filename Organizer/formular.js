@@ -16,7 +16,7 @@ var A03_Formular;
         skipButton.addEventListener("click", nextTask);
         let settingButton = document.querySelector(".settingButton");
         settingButton.addEventListener("click", settingTask);
-        getJson();
+        await getJson();
         showTask();
     }
     let currentIndex = 0;
