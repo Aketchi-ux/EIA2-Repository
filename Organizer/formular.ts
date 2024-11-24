@@ -1,9 +1,10 @@
+
 namespace A03_Formular {
     console.log("Init");
     window.addEventListener("load", handleLoad);
 
 
-    function handleLoad(_event: Event): void {
+    async function handleLoad(_event: Event): Promise<void> {
         let taskDiv: HTMLElement = <HTMLElement>document.querySelector("div#tasks");
         taskDiv.addEventListener("change", handleChange);
         let deleteButton: HTMLElement = <HTMLElement>document.querySelector(".deleteButton");
@@ -19,6 +20,8 @@ namespace A03_Formular {
         await getJson();
         showTask();
     }
+
+    let serverUrl: string = "https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/mro41572/organizerData.json"
 
     let currentIndex: number = 0
 
@@ -55,9 +58,16 @@ namespace A03_Formular {
     }
 
     async function getJson() {
-        let response: Response = await fetch("data.json");
-        let data: Data = JSON.parse(offer);
-        return await (await fetch("data.Json")).json()
+        // let response: Response = await fetch("data.json");
+        // let data: Column[] = await response.json();
+        // return data
+        let query: URLSearchParams = new URLSearchParams(serverUrl);
+        query.set("command", "insert");
+        query.set("collection", "organizerData");
+        query.set("data", JSON.stringify(serverUrl));
+        let response: Response = await fetch(serverUrl + "?" + query.toString());
+        let responseText: string = await response.text();
+        alert(responseText);
     }
 
     function deleteTask(): void {
@@ -160,4 +170,3 @@ namespace A03_Formular {
         isEditing = !isEditing;
     }
 }
-
