@@ -3,7 +3,7 @@ var A03_Formular;
 (function (A03_Formular) {
     console.log("Init");
     window.addEventListener("load", handleLoad);
-    function handleLoad(_event) {
+    async function handleLoad(_event) {
         let taskDiv = document.querySelector("div#tasks");
         taskDiv.addEventListener("change", handleChange);
         let deleteButton = document.querySelector(".deleteButton");
@@ -19,9 +19,10 @@ var A03_Formular;
         await getJson();
         showTask();
     }
+    let serverUrl = "https://7c8644f9-f81d-49cd-980b-1883574694b6.fr.bw-cloud-instance.org/mro41572/organizerData.json";
     let currentIndex = 0;
     function showTask() {
-        let task = data[currentIndex];
+        let task = A03_Formular.data[currentIndex];
         let title = document.getElementById("infosTitle");
         let name = document.getElementById("infosFor");
         let date = document.getElementById("infosDate");
@@ -47,18 +48,25 @@ var A03_Formular;
     }
     A03_Formular.showTask = showTask;
     function handleChange() {
-        console.log(JSON.stringify(data));
+        console.log(JSON.stringify(A03_Formular.data));
     }
     async function getJson() {
-        let response = await fetch("data.json");
-        let data = JSON.parse(offer);
-        return await (await fetch("data.Json")).json();
+        // let response: Response = await fetch("data.json");
+        // let data: Column[] = await response.json();
+        // return data
+        let query = new URLSearchParams(serverUrl);
+        query.set("command", "insert");
+        query.set("collection", "organizerData");
+        query.set("data", JSON.stringify(serverUrl));
+        let response = await fetch(serverUrl + "?" + query.toString());
+        let responseText = await response.text();
+        alert(responseText);
     }
     function deleteTask() {
         let userConfirmed = confirm("Do you really want to delete the task?");
         if (userConfirmed) {
             deleteCurrentTask(currentIndex);
-            if (data.length < 1)
+            if (A03_Formular.data.length < 1)
                 addTask();
             showTask();
         }
@@ -67,7 +75,7 @@ var A03_Formular;
         }
     }
     function deleteCurrentTask(_currentIndex) {
-        data.splice(_currentIndex, 1);
+        A03_Formular.data.splice(_currentIndex, 1);
     }
     function addTask() {
         console.log("Neues Task wird hinzugefügt");
@@ -81,7 +89,7 @@ var A03_Formular;
             Status: "1"
         };
         A03_Formular.data.push(newTask);
-        currentIndex = data.length - 1;
+        currentIndex = A03_Formular.data.length - 1;
         showTask();
         console.log("Neues leeres Fieldset entsteht");
     }
@@ -91,7 +99,7 @@ var A03_Formular;
         showTask();
     }
     function nextTask() {
-        if (currentIndex < data.length - 1)
+        if (currentIndex < A03_Formular.data.length - 1)
             currentIndex++;
         showTask();
     }
@@ -121,17 +129,17 @@ var A03_Formular;
             let statusPending = document.getElementById("statusPending");
             let statusProgress = document.getElementById("statusProgress");
             let statusCompleted = document.getElementById("statusCompleted");
-            data[currentIndex].Title = title.value;
-            data[currentIndex].For = name.value;
-            data[currentIndex].Date = date.value;
-            data[currentIndex].Time = time.value;
-            data[currentIndex].Comment = comment.value;
+            A03_Formular.data[currentIndex].Title = title.value;
+            A03_Formular.data[currentIndex].For = name.value;
+            A03_Formular.data[currentIndex].Date = date.value;
+            A03_Formular.data[currentIndex].Time = time.value;
+            A03_Formular.data[currentIndex].Comment = comment.value;
             if (statusPending.checked)
-                data[currentIndex].Status = "1";
+                A03_Formular.data[currentIndex].Status = "1";
             if (statusProgress.checked)
-                data[currentIndex].Status = "2";
+                A03_Formular.data[currentIndex].Status = "2";
             if (statusCompleted.checked)
-                data[currentIndex].Status = "3";
+                A03_Formular.data[currentIndex].Status = "3";
             console.log(statusPending.value);
             backButton.style.display = "inline-block";
             skipButton.style.display = "inline-block";
