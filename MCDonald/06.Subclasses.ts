@@ -1,4 +1,7 @@
 namespace Subclasses{
 
-    export class Animal
+    export class Animal{
+        
+    }
+
 }
